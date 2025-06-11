@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="698.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modifiedcinemasystem.WriteReviewsScreenController">
+    <children>
+        <BorderPane layoutX="6.0" prefHeight="712.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <AnchorPane prefWidth="225.0" style="-fx-background-color: #f0f0f0;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="25.0" layoutY="14.0" text="OOPsters Cinema Management" textFill="#2c3e50">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <AnchorPane layoutY="48.0" prefHeight="662.0" prefWidth="225.0" style="-fx-background-color: #311432; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <!-- User Profile Section -->
+                                <AnchorPane layoutX="40.0" layoutY="50.0" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: #003366; -fx-border-radius: 50; -fx-background-radius: 50;">
+                                    <children>
+                                        <Label layoutX="20.0" layoutY="35.0" text="USER" textFill="white">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+
+                                <Label layoutX="61.0" layoutY="158.0" prefHeight="18.0" prefWidth="103.0" text="WELCOME" textFill="#ecf0f1">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Customer Name Display -->
+                                <TextField fx:id="customerNameField" layoutX="27.0" layoutY="180.0" editable="false" style="-fx-background-color: #003366; -fx-text-fill: white; -fx-border-color: #3498db; -fx-border-radius: 5; -fx-background-radius: 5;">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </TextField>
+
+                                <!-- Navigation Buttons -->
+                                <Button fx:id="viewScreeningsButton" layoutX="12.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleViewScreenings" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #311432; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="View All Screening">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="bookTicketButton" layoutX="12.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleBookTicket" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #311432; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Book Ticket">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="searchMoviesButton" layoutX="12.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleSearchMovies" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #311432; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Search Movies">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="writeReviewsButton" layoutX="12.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleWriteReviews" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Write Reviews">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <!-- Sign Out Section -->
+                                <AnchorPane layoutX="12.0" layoutY="580.0" prefHeight="60.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="signOutButton" layoutX="17.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSignOut" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #4B0000; -fx-text-fill: white; -fx-border-radius: 18; -fx-background-radius: 18;" text="⚬">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="70.0" layoutY="23.0" prefHeight="18.0" prefWidth="87.0" text="Sign Out" textFill="#ecf0f1">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane style="-fx-background-color: #ecf0f1;" BorderPane.alignment="CENTER">
+                    <children>
+                        <!-- Header Section -->
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #311432; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Label fx:id="welcomeUserLabel" layoutX="20.0" layoutY="15.0" text="Welcome, mutahharmudassar" textFill="white">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="450.0" layoutY="15.0" text="Current Date: 2025-06-05 20:06:11" textFill="#bdc3c7">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Review Form Section -->
+                        <AnchorPane layoutX="14.0" layoutY="75.0" prefHeight="470.0" prefWidth="650.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Label layoutX="20.0" layoutY="15.0" text="📝 Write Your Review and Rating" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="20.0" layoutY="50.0" text="All fields are optional - Share your experience!" textFill="#7f8c8d">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Movie Selection -->
+                                <Label layoutX="20.0" layoutY="80.0" text="Movie Watched (Optional):" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="movieComboBox" layoutX="200.0" layoutY="76.0" prefHeight="25.0" prefWidth="200.0" promptText="Select a movie..." />
+
+                                <!-- Cinema Quality Rating -->
+                                <Label layoutX="20.0" layoutY="115.0" text="🏛️ Cinema Quality Rating:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Slider fx:id="cinemaQualitySlider" layoutX="200.0" layoutY="115.0" max="5.0" min="0.0" prefHeight="14.0" prefWidth="200.0" value="0.0" />
+                                <Label fx:id="cinemaQualityLabel" layoutX="410.0" layoutY="111.0" text="0.0 / 5.0" textFill="#e74c3c">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Website Quality Rating -->
+                                <Label layoutX="20.0" layoutY="145.0" text="💻 Website Quality Rating:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Slider fx:id="websiteQualitySlider" layoutX="200.0" layoutY="145.0" max="5.0" min="0.0" prefHeight="14.0" prefWidth="200.0" value="0.0" />
+                                <Label fx:id="websiteQualityLabel" layoutX="410.0" layoutY="141.0" text="0.0 / 5.0" textFill="#e74c3c">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Film Rating -->
+                                <Label layoutX="20.0" layoutY="175.0" text="🎬 Film Rating:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Slider fx:id="filmRatingSlider" layoutX="200.0" layoutY="175.0" max="5.0" min="0.0" prefHeight="14.0" prefWidth="200.0" value="0.0" />
+                                <Label fx:id="filmRatingLabel" layoutX="410.0" layoutY="171.0" text="0.0 / 5.0" textFill="#e74c3c">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Overall Experience Rating -->
+                                <Label layoutX="20.0" layoutY="205.0" text="⭐ Overall Experience:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Slider fx:id="overallRatingSlider" layoutX="200.0" layoutY="205.0" max="5.0" min="0.0" prefHeight="14.0" prefWidth="200.0" value="0.0" />
+                                <Label fx:id="overallRatingLabel" layoutX="410.0" layoutY="201.0" text="0.0 / 5.0" textFill="#e74c3c">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Customer Email -->
+                                <Label layoutX="20.0" layoutY="240.0" text="📧 Your Email (Optional):" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="customerEmailField" layoutX="200.0" layoutY="236.0" prefHeight="25.0" prefWidth="200.0" promptText="your.email@example.com" />
+
+                                <!-- Review Title -->
+                                <Label layoutX="20.0" layoutY="275.0" text="📌 Review Title (Optional):" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="reviewTitleField" layoutX="200.0" layoutY="271.0" prefHeight="25.0" prefWidth="400.0" promptText="Give your review a catchy title..." />
+
+                                <!-- Written Review -->
+                                <Label layoutX="20.0" layoutY="310.0" text="📝 Your Review (Optional):" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextArea fx:id="reviewTextArea" layoutX="20.0" layoutY="330.0" prefHeight="100.0" prefWidth="580.0" promptText="Share your detailed experience, thoughts about the movie, cinema facilities, staff service, etc..." wrapText="true">
+                                    <font>
+                                        <Font size="11.0" />
+                                    </font>
+                                </TextArea>
+
+                                <!-- Rating Display -->
+                                <Label fx:id="averageRatingLabel" layoutX="450.0" layoutY="275.0" text="Average Rating: 0.0/5.0" textFill="#27ae60">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Action Buttons -->
+                        <AnchorPane layoutX="14.0" layoutY="555.0" prefHeight="80.0" prefWidth="650.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Button fx:id="submitReviewButton" layoutX="30.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleSubmitReview" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="📤 Submit Review">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="clearFormButton" layoutX="170.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleClearForm" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="🗑️ Clear Form">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="viewReviewsButton" layoutX="310.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleViewReviews" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="👀 View Reviews">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="backButton" layoutX="450.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="🏠 Back to Home">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <!-- Status Label -->
+                                <Label fx:id="statusLabel" layoutX="30.0" layoutY="65.0" prefHeight="15.0" prefWidth="500.0" textFill="#27ae60">
+                                    <font>
+                                        <Font name="System Bold" size="10.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

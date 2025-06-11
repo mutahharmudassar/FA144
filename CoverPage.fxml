@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #4B0000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modifiedcinemasystem.CoverPageController">
+    <children>
+        <!-- Background Overlay for depth -->
+        <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: rgba(0, 0, 0, 0.2);">
+            <children>
+                <!-- Main Content Container -->
+                <AnchorPane layoutX="150.0" layoutY="80.0" prefHeight="440.0" prefWidth="600.0">
+                    <children>
+                        <!-- Logo/Image Container -->
+                        <AnchorPane layoutX="150.0" layoutY="60.0" prefHeight="220.0" prefWidth="300.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.3); -fx-border-width: 2; -fx-border-radius: 15;">
+                            <children>
+                                <!-- Cinema Logo -->
+                                <ImageView fx:id="logoImageView" fitHeight="180.0" fitWidth="260.0" layoutX="60.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@OOPster Transparent.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Title Section -->
+                        <AnchorPane layoutX="50.0" layoutY="300.0" prefHeight="80.0" prefWidth="500.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="50.0" layoutY="10.0" prefHeight="35.0" prefWidth="400.0" text="OOPsters Cinema Management System" textAlignment="CENTER" textFill="white">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+
+                                <Label alignment="CENTER" layoutX="150.0" layoutY="45.0" prefHeight="20.0" prefWidth="200.0" text="Experience Movies Like Never Before" textAlignment="CENTER" textFill="#cccccc">
+                                    <font>
+                                        <Font name="System Italic" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Loading Section -->
+                        <AnchorPane layoutX="200.0" layoutY="390.0" prefHeight="50.0" prefWidth="200.0">
+                            <children>
+                                <ProgressBar fx:id="progressBar" layoutX="25.0" layoutY="15.0" prefHeight="10.0" prefWidth="150.0" progress="0.0" style="-fx-accent: #ff6b6b; -fx-background-color: rgba(255, 255, 255, 0.2);" />
+
+                                <Label fx:id="loadingLabel" alignment="CENTER" layoutX="50.0" layoutY="30.0" prefHeight="20.0" prefWidth="100.0" text="Loading..." textAlignment="CENTER" textFill="#ffffff">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+
+                <!-- Header Brand -->
+                <AnchorPane layoutX="50.0" layoutY="30.0" prefHeight="40.0" prefWidth="800.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="250.0" layoutY="5.0" prefHeight="30.0" prefWidth="300.0" text="🎬 WELCOME TO OOPSTERS 🎬" textAlignment="CENTER" textFill="white">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+
+                <!-- Footer Info -->
+                <AnchorPane layoutX="50.0" layoutY="540.0" prefHeight="50.0" prefWidth="800.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="250.0" layoutY="5.0" prefHeight="20.0" prefWidth="300.0" text="Initializing Cinema Management System..." textAlignment="CENTER" textFill="#cccccc">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+
+                        <Label alignment="CENTER" layoutX="300.0" layoutY="25.0" prefHeight="15.0" prefWidth="200.0" text="Version 2.0.1 | 2025" textAlignment="CENTER" textFill="#999999">
+                            <font>
+                                <Font name="System Italic" size="10.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+
+                <!-- Decorative Corner Elements -->
+                <Label layoutX="50.0" layoutY="100.0" text="🎭" textFill="rgba(255, 255, 255, 0.3)">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="800.0" layoutY="120.0" text="🎪" textFill="rgba(255, 255, 255, 0.3)">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="80.0" layoutY="480.0" text="🎨" textFill="rgba(255, 255, 255, 0.3)">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="780.0" layoutY="500.0" text="🎬" textFill="rgba(255, 255, 255, 0.3)">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+
+                <!-- Subtle Pattern Elements -->
+                <AnchorPane layoutX="700.0" layoutY="200.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255, 255, 255, 0.05); -fx-background-radius: 50;" />
+                <AnchorPane layoutX="50.0" layoutY="300.0" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: rgba(255, 255, 255, 0.05); -fx-background-radius: 40;" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

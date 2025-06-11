@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #311432;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modifiedcinemasystem.SignUpScreenController">
+   <children>
+      <Label layoutX="278.0" layoutY="117.0" prefHeight="54.0" prefWidth="143.0" text="Sign Up" textFill="#fafafa">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="239.0" layoutY="191.0" onAction="#handleEnterPressed" prefHeight="30.0" prefWidth="200.0" promptText="Username" />
+      <TextField fx:id="emailField" layoutX="239.0" layoutY="243.0" onAction="#handleEnterPressed" prefHeight="30.0" prefWidth="200.0" promptText="Email" />
+      <PasswordField fx:id="passwordField" layoutX="239.0" layoutY="290.0" onAction="#handleEnterPressed" prefHeight="30.0" prefWidth="200.0" promptText="password" />
+      <Label fx:id="messageLabel" layoutX="249.0" layoutY="350.0" prefHeight="18.0" prefWidth="186.0" textFill="#f7f7f7" />
+      <Button fx:id="signUpButton" layoutX="308.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #013220; -fx-border-radius: 35; -fx-background-radius: 35;" text="🚀 Sign Up" textFill="WHITE" />
+      <Hyperlink fx:id="loginLink" layoutX="280.0" layoutY="440.0" onAction="#handleLoginLink" text="Already have an Account" />
+      <VBox alignment="CENTER_LEFT" layoutX="33.0" layoutY="117.0" prefHeight="300.0" prefWidth="180.0" spacing="20.0">
+         <children>
+            <VBox spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="🎫" textFill="white">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Label text="Book Tickets" textFill="white">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Easy online booking" textFill="#ffffff80">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="🔍" textFill="white">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Label text="Search Movies" textFill="white">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Find your favorites" textFill="#ffffff80">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="⭐" textFill="white">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Label text="Write Reviews" textFill="white">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Share your thoughts" textFill="#ffffff80">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="👤" textFill="white">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <Label text="Admin Panel" textFill="white">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Manage everything" textFill="#ffffff80">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="192.0" layoutY="14.0" prefHeight="100.0" prefWidth="300.0" spacing="5.0">
+         <children>
+            <Label text="🎬" textFill="#efefef">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label text="OOPsters Cinema" textFill="#f7f7f7">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="698.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modifiedcinemasystem.BookTicketScreenController">
+    <children>
+        <BorderPane layoutX="6.0" prefHeight="712.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <AnchorPane prefWidth="225.0" style="-fx-background-color: #f0f0f0;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="25.0" layoutY="14.0" text="OOPsters Cinema Management" textFill="#2c3e50">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <AnchorPane layoutY="48.0" prefHeight="662.0" prefWidth="225.0" style="-fx-background-color: #311432; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <!-- User Profile Section -->
+                                <AnchorPane layoutX="40.0" layoutY="50.0" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: #003366; -fx-border-radius: 50; -fx-background-radius: 50;">
+                                    <children>
+                                        <Label layoutX="20.0" layoutY="35.0" text="USER" textFill="white">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+
+                                <Label layoutX="61.0" layoutY="158.0" prefHeight="18.0" prefWidth="103.0" text="WELCOME" textFill="#ecf0f1">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Customer Name Input -->
+                                <TextField fx:id="customerNameField" layoutX="27.0" layoutY="180.0" promptText="Customer Name" style="-fx-background-color: #003366; -fx-text-fill: white; -fx-prompt-text-fill: #bdc3c7; -fx-border-color: #3498db; -fx-border-radius: 5; -fx-background-radius: 5;">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </TextField>
+
+                                <!-- Navigation Buttons -->
+                                <Button fx:id="viewScreeningsButton" layoutX="12.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleViewScreenings" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #311432; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="View All Screening">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="bookTicketButton" layoutX="12.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleBookTicket" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Book Ticket">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="searchMoviesButton" layoutX="12.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleSearchMovies" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #311432; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Search Movies">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="writeReviewsButton" layoutX="12.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleWriteReviews" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #311432; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Write Reviews">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <!-- Sign Out Section -->
+                                <AnchorPane layoutX="12.0" layoutY="580.0" prefHeight="60.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="signOutButton" layoutX="17.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSignOut" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #4B0000; -fx-text-fill: white; -fx-border-radius: 18; -fx-background-radius: 18;" text="⚬">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="70.0" layoutY="23.0" prefHeight="18.0" prefWidth="87.0" text="Sign Out" textFill="#ecf0f1">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane style="-fx-background-color: #ecf0f1;" BorderPane.alignment="CENTER">
+                    <children>
+                        <!-- Header Section -->
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #311432; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Label fx:id="welcomeUserLabel" layoutX="20.0" layoutY="15.0" text="Welcome, mutahharmudassar" textFill="white">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="450.0" layoutY="15.0" text="Current Date: 2025-06-05 18:46:16" textFill="#bdc3c7">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Movie Information Section -->
+                        <AnchorPane layoutX="14.0" layoutY="75.0" prefHeight="120.0" prefWidth="650.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Label layoutX="20.0" layoutY="15.0" text="Selected Screening Details" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="20.0" layoutY="45.0" text="Movie:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="movieTitleLabel" layoutX="70.0" layoutY="45.0" text="28 Years Later" textFill="#007bff">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="250.0" layoutY="45.0" text="Date:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="screeningDateLabel" layoutX="290.0" layoutY="45.0" text="2025-06-12" textFill="#007bff">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="400.0" layoutY="45.0" text="Time:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="screeningTimeLabel" layoutX="440.0" layoutY="45.0" text="19:30" textFill="#007bff">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="520.0" layoutY="45.0" text="Hall:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="cinemaHallLabel" layoutX="555.0" layoutY="45.0" text="Hall 1" textFill="#007bff">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="20.0" layoutY="70.0" text="Screen Type:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="screenTypeLabel" layoutX="100.0" layoutY="70.0" text="Standard" textFill="#007bff">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="220.0" layoutY="70.0" text="Available Seats:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="availableSeatsLabel" layoutX="320.0" layoutY="70.0" text="125" textFill="#28a745">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="400.0" layoutY="70.0" text="Price per Ticket:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="priceLabel" layoutX="500.0" layoutY="70.0" text="/$12.99" textFill="#dc3545">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Booking Information Section -->
+                        <AnchorPane layoutX="14.0" layoutY="205.0" prefHeight="180.0" prefWidth="650.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Label layoutX="20.0" layoutY="15.0" text="Booking Information" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Customer Information -->
+                                <Label layoutX="20.0" layoutY="45.0" text="Customer Name:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="customerBookingNameField" layoutX="130.0" layoutY="41.0" prefHeight="25.0" prefWidth="150.0" />
+
+                                <Label layoutX="300.0" layoutY="45.0" text="Phone Number:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="phoneNumberField" layoutX="400.0" layoutY="41.0" prefHeight="25.0" prefWidth="150.0" promptText="03xx-xxxxxxx" />
+
+                                <Label layoutX="20.0" layoutY="80.0" text="Email Address:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="emailField" layoutX="130.0" layoutY="76.0" prefHeight="25.0" prefWidth="200.0" promptText="example@email.com" />
+
+                                <Label layoutX="350.0" layoutY="80.0" text="Number of Tickets:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Spinner fx:id="numberOfTicketsSpinner" layoutX="460.0" layoutY="76.0" prefHeight="25.0" prefWidth="80.0" />
+
+                                <!-- Seat Selection -->
+                                <Label layoutX="20.0" layoutY="115.0" text="Preferred Seat Numbers:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="seatNumbersField" layoutX="170.0" layoutY="111.0" prefHeight="25.0" prefWidth="200.0" promptText="e.g., A1, A2, A3" />
+
+                                <Button fx:id="generateSeatsButton" layoutX="380.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleGenerateSeats" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #17a2b8; -fx-text-fill: white; -fx-border-radius: 3; -fx-background-radius: 3;" text="Auto Generate">
+                                    <font>
+                                        <Font name="System Bold" size="10.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="showSeatingButton" layoutX="490.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleShowSeating" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #6f42c1; -fx-text-fill: white; -fx-border-radius: 3; -fx-background-radius: 3;" text="Show Seating">
+                                    <font>
+                                        <Font name="System Bold" size="10.0" />
+                                    </font>
+                                </Button>
+
+                                <!-- Total Cost -->
+                                <Label layoutX="20.0" layoutY="150.0" text="Total Cost:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalCostLabel" layoutX="100.0" layoutY="150.0" text="/$0.00" textFill="#dc3545">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+
+                                <Button fx:id="calculateTotalButton" layoutX="200.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleCalculateTotal" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-border-radius: 3; -fx-background-radius: 3;" text="Calculate Total">
+                                    <font>
+                                        <Font name="System Bold" size="10.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Payment Section -->
+                        <AnchorPane layoutX="14.0" layoutY="395.0" prefHeight="120.0" prefWidth="650.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Label layoutX="20.0" layoutY="15.0" text="Payment Method" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+
+                                <RadioButton fx:id="cashPaymentRadio" layoutX="30.0" layoutY="50.0" mnemonicParsing="false" text="Cash Payment">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="paymentMethodGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+
+                                <RadioButton fx:id="bankDepositRadio" layoutX="180.0" layoutY="50.0" mnemonicParsing="false" text="Bank Deposit" toggleGroup="$paymentMethodGroup">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </RadioButton>
+
+                                <Label layoutX="30.0" layoutY="80.0" text="Payment Status:" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="paymentStatusLabel" layoutX="130.0" layoutY="80.0" text="Pending" textFill="#f39c12">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <Button fx:id="processPaymentButton" layoutX="400.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleProcessPayment" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Process Payment">
+                                    <font>
+                                        <Font name="System Bold" size="11.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Action Buttons -->
+                        <AnchorPane layoutX="14.0" layoutY="525.0" prefHeight="80.0" prefWidth="650.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+                            <children>
+                                <Button fx:id="confirmBookingButton" layoutX="30.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleConfirmBooking" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Confirm Booking">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="generateTicketButton" layoutX="170.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleGenerateTicket" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #17a2b8; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Generate Ticket">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="cancelBookingButton" layoutX="310.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleCancelBooking" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Cancel Booking">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="backToScreeningsButton" layoutX="450.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleBackToScreenings" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Back to Screenings">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+
+                                <!-- Status Label -->
+                                <Label fx:id="statusLabel" layoutX="30.0" layoutY="65.0" prefHeight="15.0" prefWidth="500.0" textFill="#28a745">
+                                    <font>
+                                        <Font name="System Bold" size="10.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
